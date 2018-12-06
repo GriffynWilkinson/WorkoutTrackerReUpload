@@ -1,0 +1,69 @@
+  WorkoutTracker.LoadWorkoutForm.resources - Embedded, ContainedInManifestFile, 
+  WorkoutTracker.WorkoutTracker.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly WorkoutTracker, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Date: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    SetDay(Int16): PrivateScope, Public, HideBySig
+    GetDay(): PrivateScope, Public, HideBySig
+    SetMonth(Int16): PrivateScope, Public, HideBySig
+    GetMonth(): PrivateScope, Public, HideBySig
+    SetYear(Int16): PrivateScope, Public, HideBySig
+    GetYear(): PrivateScope, Public, HideBySig
+    SetDate(Int16, Int16, Int16): PrivateScope, Public, HideBySig
+Class WeightRepSet: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(WeightRepSet*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    SetWeight(Int16): PrivateScope, Public, HideBySig
+    GetWeight(): PrivateScope, Public, HideBySig
+    SetReps(Int16): PrivateScope, Public, HideBySig
+    GetReps(): PrivateScope, Public, HideBySig
+    SetSets(Int16): PrivateScope, Public, HideBySig
+    GetSets(): PrivateScope, Public, HideBySig
+Class Exercise: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String m_Name : Public
+    System.Collections.Generic.List`1[WeightRepSet] m_WeightRepSet IsByValue : Public, InitOnly
+  Methods:
+    AddWeightRepSet(WeightRepSet): PrivateScope, Public, HideBySig
+    AddWeightRepSet(Int16, Int16, Int16): PrivateScope, Public, HideBySig
+    SetWeightRepSet(List`1 IsByValue): PrivateScope, Public, HideBySig
+Class Workout: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Date m_Date : Public
+    System.Collections.Generic.List`1[Exercise] m_Exercises IsByValue : Public, InitOnly
+Class WorkoutTracker.LoadWorkoutForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Workout): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Workout workout : Public
+  Methods:
+    CheckDateFormat(String): PrivateScope, Public, Static, HideBySig
+    CheckDateFormat(basic_string<char\,std::char_traits<char>\,std::allocator<char> >*): PrivateScope, Public, Static, HideBySig
+Class WorkoutTracker.WorkoutTracker: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Workout workout : Public
+  Methods:
+    DisplayCurrentWorkout(): PrivateScope, Public, HideBySig
+    CheckDateFormat(String): PrivateScope, Public, Static, HideBySig
+    CheckDateFormat(basic_string<char\,std::char_traits<char>\,std::allocator<char> >*): PrivateScope, Public, Static, HideBySig
